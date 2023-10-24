@@ -1,0 +1,113 @@
+{
+  "name": "beui-snippets",
+  "displayName": "BeUI-snippets",
+  "description": "fast generate beui components template",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:vue"
+  ],
+  "main": "./dist/index.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "beui-snippets.beTable",
+        "title": "be-table"
+      },
+      {
+        "command": "beui-snippets.beInput",
+        "title": "be-input"
+      },
+      {
+        "command": "beui-snippets.beSelect",
+        "title": "be-select"
+      },
+      {
+        "command": "beui-snippets.beCascader",
+        "title": "be-cascader"
+      },
+      {
+        "command": "beui-snippets.beCheckbox",
+        "title": "be-checkbox"
+      },
+      {
+        "command": "beui-snippets.beRadio",
+        "title": "be-radio"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "BeUIExample",
+          "group": "beui-group",
+          "when": "resourceLangId == vue"
+        }
+      ],
+      "BeUIExample": [
+        {
+          "command": "beui-snippets.beTable",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beInput",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beSelect",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beCascader",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beCheckbox",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beRadio",
+          "group": "beui-group"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "BeUIExample",
+        "label": "BeUI"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.78.0",
+    "@types/webpack-env": "^1.18.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
+  }
+}
