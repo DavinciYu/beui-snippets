@@ -1,29 +1,31 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-// const path = require('path');
+const path = require('path');
+
+const commandPrefix: string = 'beui-snippets.';
+const filesList: Array<Record<string, string>> = [
+  { command: commandPrefix+'beTable', fileName: 'table.vue'},
+  { command: commandPrefix+'beInput', fileName: 'input.vue'},
+  { command: commandPrefix+'beSelect', fileName: 'select.vue'},
+  { command: commandPrefix+'beCascader', fileName: 'cascader.vue'},
+  { command: commandPrefix+'beCheckbox', fileName: 'checkbox.vue'},
+  { command: commandPrefix+'beDatePicker', fileName: 'datePicker.vue'},
+  { command: commandPrefix+'beForm', fileName: 'form.vue'},
+  { command: commandPrefix+'beRadio', fileName: 'radio.vue'}
+];
 
 const registerCommand = vscode.commands.registerCommand;
-export const disposable = function(context: vscode.ExtensionContext) { 
-  return [
-    registerCommand('beui-snippets.beTable', () => {
-      handleFile('/table.vue', context);
-    }),
-    registerCommand('beui-snippets.beInput', () => {
-      handleFile('/input.vue', context);
-    }),
-    registerCommand('beui-snippets.beSelect', () => {
-      handleFile('/select.vue', context);
-    }),
-    registerCommand('beui-snippets.beCascader', () => {
-      handleFile('/cascader.vue', context);
-    })
-  ];
+export const disposable = function() { 
+  return filesList.map(item=>{
+    return registerCommand(item.command, () => {
+      handleFile(item.fileName);
+    });
+  });
 };
 
-function handleFile(fileName: string, context: vscode.ExtensionContext) {
-  // console.log('yyy', context.extensionPath );
-  const componentsFile = vscode.Uri.file(context.extensionPath + '/src/demoFiles' + fileName);
+function handleFile(fileName: string) {
+  const componentsFile = vscode.Uri.file(path.join(__dirname, 'src', fileName));
   editOpenedFileInWindow(componentsFile);
 }
 

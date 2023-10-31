@@ -3,7 +3,7 @@ import { disposable } from './extension';
 import { beuiProvider } from './completionProvider';
 
 export function activate(context: vscode.ExtensionContext) {
-  disposable(context).forEach(item=>{
+  disposable().forEach(item=>{
     context.subscriptions.push(item);
   });
   context.subscriptions.push(beuiProvider);
