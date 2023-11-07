@@ -35,7 +35,6 @@
 <script>
 import { BeDate } from '@be-ui/pc'
 export default {
-  name: 'DemoInput',
   components: {
     BeDate
   },

@@ -12,7 +12,10 @@ const filesList: Array<Record<string, string>> = [
   { command: commandPrefix+'beCheckbox', fileName: 'checkbox.vue'},
   { command: commandPrefix+'beDatePicker', fileName: 'datePicker.vue'},
   { command: commandPrefix+'beForm', fileName: 'form.vue'},
-  { command: commandPrefix+'beRadio', fileName: 'radio.vue'}
+  { command: commandPrefix+'beRadio', fileName: 'radio.vue'},
+  { command: commandPrefix+'beButton', fileName: 'button.vue'},
+  { command: commandPrefix+'beDialog', fileName: 'dialog.vue'},
+  { command: commandPrefix+'beSearchTable', fileName: 'searchTablePage.vue'}
 ];
 
 const registerCommand = vscode.commands.registerCommand;
@@ -33,21 +36,21 @@ export function editOpenedFileInWindow(filePath: vscode.Uri) {
   // 获取 vscode.TextDocument对象
   vscode.workspace.openTextDocument(filePath).then(doc => {
     // 获取 vscode.TextEditor对象
-    vscode.window.showTextDocument(doc).then(editor => {
+    vscode.window.showTextDocument(doc, -2).then(editor => {
       // 获取 vscode.TextEditorEdit对象， 然后进行字符处理
-      editor.edit(editorEdit => {
-        // 这里可以做以下操作: 删除, 插入, 替换, 设置换行符
-        // 以插入字符串为例: "Hello Word\r\n"
-        // editorEdit.insert(new vscode.Position(0, 0), "Hello Word\r\n");
-      }).then(isSuccess => {
-          if (isSuccess) {
-            console.log("Edit successed");
-          } else {
-            console.log("Edit failed");
-          }
-        }, err => {
-          console.error("Edit error, " + err);
-        });
+      // editor.edit(editorEdit => {
+      //   // 这里可以做以下操作: 删除, 插入, 替换, 设置换行符
+      //   // 以插入字符串为例: "Hello Word\r\n"
+      //   // editorEdit.insert(new vscode.Position(0, 0), "Hello Word\r\n");
+      // }).then(isSuccess => {
+      //     if (isSuccess) {
+      //       console.log("Edit successed");
+      //     } else {
+      //       console.log("Edit failed");
+      //     }
+      //   }, err => {
+      //     console.error("Edit error, " + err);
+      //   });
       });
     }).then(undefined, err => {
       console.error(err);

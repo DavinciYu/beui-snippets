@@ -2,6 +2,7 @@
   "name": "beui-snippets",
   "displayName": "BeUI-snippets",
   "description": "fast generate beui components template",
+  "publisher": "Davinci Yu",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.78.0"
@@ -42,6 +43,18 @@
       {
         "command": "beui-snippets.beDatePicker",
         "title": "be-datePicker"
+      },
+      {
+        "command": "beui-snippets.beButton",
+        "title": "be-button"
+      },
+      {
+        "command": "beui-snippets.beDialog",
+        "title": "be-dialog"
+      },
+      {
+        "command": "beui-snippets.beSearchTable",
+        "title": "be-searchTable"
       }
     ],
     "menus": {
@@ -79,6 +92,18 @@
         },
         {
           "command": "beui-snippets.beDatePicker",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beButton",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beDialog",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beSearchTable",
           "group": "beui-group"
         }
       ]
