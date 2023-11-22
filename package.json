@@ -2,7 +2,7 @@
   "name": "beui-snippets",
   "displayName": "BeUI-snippets",
   "description": "fast generate beui components template",
-  "publisher": "Davinci Yu",
+  "publisher": "davinci-yu",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.78.0"
@@ -55,6 +55,10 @@
       {
         "command": "beui-snippets.beSearchTable",
         "title": "be-searchTable"
+      },
+      {
+        "command": "beui-snippets.beUpload",
+        "title": "be-upload"
       }
     ],
     "menus": {
@@ -104,6 +108,10 @@
         },
         {
           "command": "beui-snippets.beSearchTable",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beUpload",
           "group": "beui-group"
         }
       ]

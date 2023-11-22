@@ -15,7 +15,8 @@ const filesList: Array<Record<string, string>> = [
   { command: commandPrefix+'beRadio', fileName: 'radio.vue'},
   { command: commandPrefix+'beButton', fileName: 'button.vue'},
   { command: commandPrefix+'beDialog', fileName: 'dialog.vue'},
-  { command: commandPrefix+'beSearchTable', fileName: 'searchTablePage.vue'}
+  { command: commandPrefix+'beSearchTable', fileName: 'searchTablePage.vue'},
+  { command: commandPrefix+'beUpload', fileName: 'upload.vue'}
 ];
 
 const registerCommand = vscode.commands.registerCommand;
