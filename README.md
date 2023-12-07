@@ -1,7 +1,10 @@
-## 开发过程中遇到的问题
-1、按官网初始化项目运行调试之后，在命令行根据hellow搜索不到任何结果。
-   原因： package.json里面的engines.vscode字段设置的版本号过高，当前本机的vscode版本没达到要求
-   解决办法：升级vscode或者修改配置字段
-2、当报command xxx not found错误时，有可能时配置的版本过低，需要将package.json里的activationEvents字段配上相应的命令 （Note: Extensions targeting VS Code versions prior to 1.74.0 must explicitly register an onCommand activationEvent for all user facing commands so that the extension activates and registerCommand executes）
-
-vsce package
+## 简介
+本插件为BeUI组件提供一个快捷的参考入口。  
+计划下一阶段提供代码补全功能。
+## 使用说明
+安装：在vscode扩展列表搜索BeUI-snippets，即可下载安装  
+使用：
+* 启用插件后，在vue文件中点击鼠标右键，会弹出如下图的右键菜单  
+![BeUI-snippets使用方法](https://github.com/DavinciYu/beui-snippets/example1.png)
+* 选择右键菜单中想要参考的组件名称，点击即会打开相应组件的模板文件，效果如下图：  
+![BeUI-snippets使用方法](https://github.com/DavinciYu/beui-snippets/example2.png)

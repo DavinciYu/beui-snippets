@@ -3,7 +3,7 @@
   "displayName": "BeUI-snippets",
   "description": "fast generate beui components template",
   "publisher": "davinci-yu",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.78.0"
   },
