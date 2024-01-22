@@ -59,6 +59,10 @@
       {
         "command": "beui-snippets.beUpload",
         "title": "be-upload"
+      },
+      {
+        "command": "beui-snippets.beForm",
+        "title": "be-form"
       }
     ],
     "menus": {
@@ -112,6 +116,10 @@
         },
         {
           "command": "beui-snippets.beUpload",
+          "group": "beui-group"
+        },
+        {
+          "command": "beui-snippets.beForm",
           "group": "beui-group"
         }
       ]

@@ -1,7 +1,10 @@
-export default `<be-select 
-  v-model="selectModel"
-  class="select-class"
-  :options="selectOptions"
->
-</be-select>
+export default `
+<be-select
+  v-model="selectValue"
+  :options="options"
+  optionsValue="value"
+  optionsLabel="label"
+  placeholder="请选择内容"
+  @change="selectChange"
+/>
 `;
