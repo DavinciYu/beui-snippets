@@ -66,10 +66,32 @@
     @handleCurrentChange="tableCurrentChange"
   >
     <be-table-column
+      :type="'selection'/**selection/index/expand */"
+      label="列名称"
+      align="left"
+      width="200px"
+      min-width="200"
+      column-key=""
+      prop="propName"
+      :resizable="true/**需要在 el-table 上设置 border 属性为真 */" 
+      show-overflow-tooltip
+      header-align="left"
+      class-name=""
+      label-class-name=""
+    >
+      <template slot="header">
+        自定义表头
+      </template>
+      <template slot-scope="scope">
+        {{ {{ scope.row.propName }} }}
+      </template>
+    </be-table-column>
+    <be-table-column
       label="操作"
       align="left"
       width="200px"
       min-width="200"
+      fixed="right"
     >
       <!-- 操作按钮区域 -->
       <div slot-scope="scope" class="left_text_align">

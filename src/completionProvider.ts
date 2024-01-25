@@ -4,20 +4,20 @@ import beComponents from './components/index';
 export const beuiProvider = vscode.languages.registerCompletionItemProvider('vue', {
   provideCompletionItems() {        
     return [
-      ['be-input', 'BeInput'],
+      ['be-input', 'beInput'],
       ['be-select', 'beSelect'],
-      ['be-table', 'BeTable'],
-      ['be-cascader', 'BeCascader'],
-      ['be-button', 'BeButton'],
-      ['be-checkbox', 'BeCheckbox'],
-      ['be-checkbox-group', 'BeCheckboxGroup'],
-      ['be-datePicker', 'BeDatePicker'],
-      ['be-dialog', 'BeDialog'],
-      ['be-form', 'BeForm'],
-      ['be-radio', 'BeRadio'],
-      ['be-radio-group', 'BeRadioGroup'],
-      ['be-searchTablePage', 'BeSearchTablePage'],
-      ['be-upload', 'BeUpload']
+      ['be-table', 'beTable'],
+      ['be-cascader', 'beCascader'],
+      ['be-button', 'beButton'],
+      ['be-checkbox', 'beCheckbox'],
+      ['be-checkbox-group', 'beCheckboxGroup'],
+      ['be-datePicker', 'beDatePicker'],
+      ['be-dialog', 'beDialog'],
+      ['be-form', 'beForm'],
+      ['be-radio', 'beRadio'],
+      ['be-radio-group', 'beRadioGroup'],
+      ['be-searchTablePage', 'beSearchTablePage'],
+      ['be-upload', 'beUpload']
     ].map(item=>{
       return {
         detail: item[0],
